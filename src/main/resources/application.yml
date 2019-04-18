@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    master:
+      jdbc-url: jdbc:mysql://localhost:3308/msourcem?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    slave1:
+      jdbc-url: jdbc:mysql://localhost:3308/msources1?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+      username: root   # 只读账户
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    slave2:
+      jdbc-url: jdbc:mysql://localhost:3308/msources2?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+      username: root   # 只读账户
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
